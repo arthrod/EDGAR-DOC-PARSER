@@ -11,6 +11,7 @@ from html.parser import HTMLParser
 
 from .metadata_manager import metadata_manager
 from .document import DocumentType
+import fickling
 
 
 class Parser:
@@ -675,4 +676,4 @@ class Parser:
         path = os.path.join(self.data_dir, DocumentType.PARSED_FILE_DIR_NAME,
                             tikr, submission, f'{document_type}', filename)
         with open(os.path.join(path, 'features.pkl'), 'rb') as f:
-            return pkl.load(f)
+            return fickling.load(f)

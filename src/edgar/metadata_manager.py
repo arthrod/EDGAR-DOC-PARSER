@@ -11,6 +11,7 @@ import urllib.request
 import json
 
 from .document import DocumentType
+import fickling
 
 
 class metadata_manager(dict):
@@ -78,7 +79,7 @@ class metadata_manager(dict):
         if os.path.exists(data_path):
 
             with open(data_path, 'rb') as f:
-                self[tikr] = pkl.load(f)
+                self[tikr] = fickling.load(f)
             return True
 
         self.initialize_tikr_metadata(tikr)
