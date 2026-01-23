@@ -124,7 +124,7 @@ proxy-tools==0.1.0
 psutil==5.9.0
 ptyprocess==0.7.0
 py==1.10.0
-pyasn1==0.4.8
+pyasn1==0.6.2
 pyasn1-modules==0.2.8
 pycairo==1.20.1
 pycodestyle==2.8.0
@@ -237,3 +237,4 @@ yapf==0.32.0
 yarl==1.8.1
 youtube-dl==2021.12.17
 zipp==1.0.0
+wheel>=0.46.2 # not directly required, pinned by Snyk to avoid a vulnerability
